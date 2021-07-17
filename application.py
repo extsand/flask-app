@@ -106,7 +106,9 @@ welcome = """
 </head>
 <body id="sample">
   <div class="textColumn">
-    <h1>Flask-app CI/CD from GitHub Actions</h1>
+    <h1>Flask-app 
+	<br>
+		CI/CD from GitHub Actions</h1>
     <p>Your first AWS Elastic Beanstalk Python Application is now running on your own dedicated environment in the AWS Cloud</p>
     <p>This environment is launched with Elastic Beanstalk Python Platform</p>
   </div>
