@@ -19,115 +19,262 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 welcome = """
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-  <!--
-    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./css/style_add.css">
+  <head>
+    <title>Elastic Beanstalk Color.App </title>
+   
+  </head>
+  <body>
+	<style>
 
-    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
+	body {
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+	font-size:14px;
+	-moz-transition-property: text-shadow;
+	-moz-transition-duration: 4s;
+	-webkit-transition-property: text-shadow;
+	-webkit-transition-duration: 4s;
+	text-shadow: none;
+}
+body.blurry {
+	-moz-transition-property: text-shadow;
+	-moz-transition-duration: 4s;
+	-webkit-transition-property: text-shadow;
+	-webkit-transition-duration: 4s;
+	text-shadow: #fff 0px 0px 25px;
+}
+a {
+	color: #55aaff;
+}
+.textColumn, .linksColumn {
+	padding: 2em;
+}
+.textColumn {
+	position: absolute;
+	top: 0px;
+	right: 50%;
+	bottom: 0px;
+	left: 0px;
+}
 
-        http://aws.Amazon/apache2.0/
+.linksColumn {
+	position: absolute;
+	top:0px;
+	right: 0px;
+	bottom: 0px;
+	left: 50%;
+	background-color: #33342D;
+}
 
-    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-  -->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Hello from GIT</title>
-  <style>
-  body {
-    color: #ffffff;
-    background-color: #E0E0E0;
-    font-family: Arial, sans-serif;
-    font-size:14px;
-    -moz-transition-property: text-shadow;
-    -moz-transition-duration: 4s;
-    -webkit-transition-property: text-shadow;
-    -webkit-transition-duration: 4s;
-    text-shadow: none;
-  }
-  body.blurry {
-    -moz-transition-property: text-shadow;
-    -moz-transition-duration: 4s;
-    -webkit-transition-property: text-shadow;
-    -webkit-transition-duration: 4s;
-    text-shadow: #fff 0px 0px 25px;
-  }
-  a {
-    color: #0188cc;
-  }
-  .textColumn, .linksColumn {
-    padding: 2em;
-  }
-  .textColumn {
+h1 {
+	color: #33342D;
+	font-size: 500%;
+	font-weight: normal;
+	margin-bottom: 0em;
+}
+
+ul {
+	padding-left: 1em;
+	margin: 0px;
+}
+li {
+	margin: 1em 0em;
+}
+
+	h1 {
+  color: #000501;
+  font-size: 6rem;
+  font-weight: 600; }
+
+h2 {
+  font-size: 3rem; }
+
+.textColumn, .linksColumn {
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+p {
+  font-size: 1.4rem;
+  text-align: center; }
+
+.linksColumn {
+  background-color: #000501;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.controller {
+  font-size: 1.5rem;
+  cursor: pointer; }
+
+ul li {
+  list-style-type: none;
+  text-align: center;
+  color: #000;
+  display: block;
+  background-color: #73AB84;
+  padding: 1rem 3rem;
+  border-radius: 10px; }
+  ul li:hover {
+    -webkit-box-shadow: 0px 0px 10px #79C7C5;
+            box-shadow: 0px 0px 10px #79C7C5;
+    background-color: #79C7C5; }
+
+.notification {
+  margin-bottom: 1rem;
+  position: relative;
+  font-size: 1.3rem;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+  .notification:before {
+    content: '';
+    background-color: red;
+    display: block;
     position: absolute;
-    top: 0px;
-    right: 50%;
-    bottom: 0px;
-    left: 0px;
+    right: -19px;
+    top: -19px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; }
 
-    text-align: right;
-    padding-top: 11em;
-    background-color: #1BA86D;
-    background-image: -moz-radial-gradient(left top, circle, #6AF9BD 0%, #00B386 60%);
-    background-image: -webkit-gradient(radial, 0 0, 1, 0 0, 500, from(#6AF9BD), to(#00B386));
-  }
-  .textColumn p {
-    width: 75%;
-    float:right;
-  }
-  .linksColumn {
-    position: absolute;
-    top:0px;
-    right: 0px;
-    bottom: 0px;
-    left: 50%;
+.colorCode {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px; }
+/*# sourceMappingURL=style_add.css.map */
 
-    background-color: #E0E0E0;
-  }
+ 
+	</style>
 
-  h1 {
-    font-size: 500%;
-    font-weight: normal;
-    margin-bottom: 0em;
-  }
-  h2 {
-    font-size: 200%;
-    font-weight: normal;
-    margin-bottom: 0em;
-  }
-  ul {
-    padding-left: 1em;
-    margin: 0px;
-  }
-  li {
-    margin: 1em 0em;
-  }
-  </style>
-</head>
-<body id="sample">
-  <div class="textColumn">
-    <h1>Flask-app 
-	<br>
-		CI/CD from GitHub Actions</h1>
-    <p>Your first AWS Elastic Beanstalk Python Application is now running on your own dedicated environment in the AWS Cloud</p>
-    <p>This environment is launched with Elastic Beanstalk Python Platform</p>
-  </div>
-  
-  <div class="linksColumn"> 
-    <h2>What's Next?</h2>
-    <ul>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html">Deploy a Django Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_flask.html">Deploy a Flask Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_custom_container.html">Customizing and Configuring a Python Container</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
 
-    </ul>
-  </div>
-</body>
+
+
+    <div class="textColumn">
+      <h1>Color.app</h1>
+      <p class="first_line">It's simple js app. You can change background-color with controllers in right panel. 
+			<br> 
+			This environment is launched with Elastic Beanstalk Node.js Platform</p>
+			<p class="second_line"></p>
+
+			<div class="notification">color copied</div>
+			<div class="colorCode">#005800</div>
+			
+			
+      
+    </div>
+    <div class="linksColumn">
+      <h2>What color do you like?</h2>
+      <ul>
+				<li class="controller" data-colorChoice="green">Green</li>
+				<li class="controller" data-colorChoice="yellow">Yelow</li>
+				<li class="controller" data-colorChoice="red">Red</li>
+				<li class="controller" data-colorChoice="blue">Blue</li>
+				<li class="controller" data-colorChoice="purpure">Purpure</li>
+				<li class="controller" data-colorChoice="orange">Orange</li>
+				
+      </ul>
+    </div>
+  </body>
+	<script>
+		//Color choice app
+			const controllers = document.querySelectorAll('.controller')
+			const leftPanel = document.querySelector('.textColumn')
+			const colorCode = document.querySelector('.colorCode')
+			const notification = document.querySelector('.notification')
+
+
+
+			//  leftPanel.style.backgroundColor = "red";
+
+			const colorsDB = { 
+				yellow: '#EFA00B',
+				blue: '#228cdb',
+				purpure: '#170A1C',
+				red: '#F71735',
+				orange: '#FF9F1C',
+				green: '#4CE670'
+
+			}
+
+
+			// console.log(controllers)
+			controllers.forEach( item => {
+				console.log(item.dataset.colorchoice)
+
+				item.addEventListener('click', (e) => {
+					
+					const color = e.target.dataset.colorchoice
+					const setColor = colorsDB[color]
+					leftPanel.style.transition = "all 2s"
+					leftPanel.style.backgroundColor = setColor	
+					
+
+					colorCode.textContent = setColor
+
+				})
+			})
+
+
+
+			colorCode.addEventListener('click', (e) => {
+				const selectedText = colorCode.textContent
+				console.log(selectedText)
+
+
+			const navi = 	navigator.clipboard.writeText(selectedText)
+					.then( (data) => {
+						console.log('text copied')
+						addNotification('color copied')
+						
+					
+					})
+					.catch((err) => console.log(err))	
+
+				
+			})
+
+
+			function addNotification(text, timeout=1000) {
+				notification.textContent = text
+				notification.style.opacity = 1
+				setTimeout(() => {
+					notification.style.opacity = 0
+				}, timeout)
+			}
+
+
+
+
+	</script>
 </html>
+
+
+
+
+
+
 """
+
+
+
 
 
 def application(environ, start_response):
